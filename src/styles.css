@@ -1,0 +1,100 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cloud {
+  width: 200px;
+  height: 200px;
+  background-image: url(https://static.thenounproject.com/png/27338-200.png);
+  position: relative;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moveclouds 3s linear infinite, dissipate 25s linear forwards;
+  z-index: inherit;
+}
+
+@keyframes dissipate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.centered-word {
+  text-align: center;
+}
+
+.sky1 {
+  z-index: 3;
+
+  opacity: 0.4;
+  -webkit-animation: moveclouds 45s linear infinite;
+  -moz-animation: moveclouds 45s linear infinite;
+  -o-animation: moveclouds 45s linear infinite;
+  animation: moveclouds 45s linear infinite, dissipate 25s linear forwards;
+}
+
+.sky2 {
+  z-index: 3;
+
+  left: 200px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.4;
+  -webkit-animation: moveclouds 50s linear infinite;
+  -moz-animation: moveclouds 50s linear infinite;
+  -o-animation: moveclouds 50s linear infinite;
+  animation: moveclouds 45s linear infinite, dissipate 12s linear forwards;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: -300px;
+  }
+  100% {
+    margin-left: 1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: -300px;
+  }
+  100% {
+    margin-left: 1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: -300px;
+  }
+  100% {
+    margin-left: 1000px;
+  }
+}
+
+.mtn {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  top: -300px; /* adjust this value to control the vertical overlap */
+  z-index: 0;
+}
+
+.cloud.sky2 {
+  position: relative;
+  z-index: 3;
+}
+.cloud.sky1 {
+  position: relative;
+  z-index: 3;
+}
+
+.frontal {
+  z-index: 3;
+}
